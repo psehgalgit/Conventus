@@ -20,27 +20,20 @@ Route::get('/apply', function () {
     return view('loanapplication');
 });
 
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
 Auth::routes();
 Route::get('/users', 'UserController@index');
+Auth::routes();
+Route::get('/users/create', 'UserController@create');
+
+Route::post('/users/store', 'UserController@store');
 
 
 /*
+
 *  Routes for all the loan application submission
-*  All will be available to Authenticated users only
 *
 */
 Route::get('/loan/credit', 'LoanController@credit');
