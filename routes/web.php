@@ -38,9 +38,24 @@ Auth::routes();
 Route::get('/users', 'UserController@index');
 
 
-Route::get('/users/create', 'UserController@create');
+/*
+*  Routes for all the loan application submission
+*  All will be available to Authenticated users only
+*
+*/
+Route::get('/loan/credit', 'LoanController@credit');
 
-Route::post('/users/store', 'UserController@store');
+Route::get('/loan/property', 'LoanController@property');
+
+Route::get('/loan/borrower', 'LoanController@borrower');
+
+Route::get('/loan/entity', 'LoanController@entity');
+
+Route::get('/loan/borroweremployment', 'LoanController@borroweremployment');
+
+Route::get('/loan/schedule', 'LoanController@schedule');
+
+Route::get('/loan/signers', 'LoanController@signers');
 
 
 
