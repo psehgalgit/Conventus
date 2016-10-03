@@ -37,4 +37,5 @@ class LoanController extends Controller
 		return view('loan.entity');
     }
 	
+	
 }
