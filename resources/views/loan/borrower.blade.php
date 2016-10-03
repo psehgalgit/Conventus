@@ -16,23 +16,23 @@ padding-left: 0px;
 @extends('layouts.header-fixed')
 @extends('layouts.sidebar')
 @section('content')
-
-<div class="page-content-wrapper">
+  <div class="page-content-wrapper">
     <!-- BEGIN CONTENT BODY -->
     <div class="page-content">
       <!-- BEGIN PAGE HEADER-->
       <div class="row">
         <div class="col-md-12"> <br>
-          <div class="portlet light bordered" id="form_wizard_1">
+          <div class="portlet light bordered col-md-12" id="form_wizard_1">
             <div class="portlet-title">
               <div class="actions"> 
-        <a class="btn btn-sm btn-success" href="borrowerinfo.php">Save & Continue <i class="fa fa-arrow-right"></i></a> <a class="btn btn-sm btn-success text-right" href="#"> Save & Exit <i class="fa fa-arrow-right"></i></a> </div>
+						<a class="btn btn-sm btn-success text-right" href="entityinfo.php">Save & Continue <i class="fa fa-arrow-right"></i></a> <a class="btn btn-sm btn-success text-right" href="#"> Save & Exit <i class="fa fa-arrow-right"></i></a>	
+			  </div>
             </div>
-             <div class="portlet-body form">
+            <div class="portlet-body form">
               <form class="form-horizontal" action="#" id="submit_form" method="POST">
                 <div class="form-wizard">
                   <div class="form-body">
-                 
+                    
                     <div class="tab-content">
                       <div class="alert alert-danger display-none">
                         <button class="close" data-dismiss="alert"></button>
@@ -40,219 +40,229 @@ padding-left: 0px;
                       <div class="alert alert-success display-none">
                         <button class="close" data-dismiss="alert"></button>
                         Your form validation is successful! </div>
-                        <div class="progress" style="padding: 0px;margin-bottom: 18px;">
-<div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
-aria-valuenow="15" aria-valuemin="15" aria-valuemax="100" style="width:15% !important; min-width:15% !important" 
-id="progress-1">15%</div>
-</div>
-                        <div class="col-md-12 form-group">
-                         <h3 class="block" style="margin-top:0;">Property Information </h3>
-                        </div>
-            <div class="portlet light bordered bg-inverse col-md-12 cust-bg" style="padding-0">
-            
-            
-  <div class="portlet-title">
-                                    <div class="caption font-red-sunglo">
-                                        <i class="icon-settings font-red-sunglo"></i>
-                                        <span class="caption-subject bold uppercase">Info Submitted </span>
-                                    </div>
-                  
-                   <div class="actions">
-                                        <div class="btn-group">
-                  
-                                           
-                                        </div>
-                                    </div>
-                                
-                  
-  </div><br />
-            
-     
-            </div>
-                         <div>
- <h3 class="block text-center" style="display:none;">Provide your Property Address details</h3>
-<div class="col-md-12 form-group">
-
-                              <div class="col-md-3">
-                                <label  class="control-label">Street Address</label>
-                              </div>
-                              <div class="col-md-3">
-                                <input class="form-control input-medium" type="text" name="streetaddr" id="streetaddr" />
-                              </div>
-							  
-							  
-							
-                              <div class="col-md-3 ">
-                              <label class="control-label" style="text-align:left;">Unit #</label>
+						 <div class="progress">
+						<div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+						aria-valuenow="25" aria-valuemin="25" aria-valuemax="100" style="width:25% !important; min-width:25% !important" 
+						id="progress-1">25%</div>
+						</div>
+					   <div class="col-md-12 form-group">
+							  <div class="col-md-3">
+								<label class="control-label" style="color: #000;"> Number of Borrowers
+								</label> </div>
+								<div class="col-md-3 radio-list" id="numberofborrowers">
+                            <ul class="list-inline" style="padding-top:7px;"><li>
+                              <label>
+                              <input type="radio" name="borrowerscount" class="borrowerscount" value="1" />
+                              1</label></li>
+                              <li>
+                              <label>
+                              <input type="radio" name="borrowerscount" class="borrowerscount" value="2"/>
+                              2</label></li>
+                              <li><label>
+                              <input type="radio" name="borrowerscount" class="borrowerscount" value="3"/>
+                              3+</label></li>
+                              </ul>
                             </div>
-                            <div class="col-md-3">
-                              <input class="form-control date input-medium" type="text" name="unitno" id="escrow" />
-                              </div>
-							  </div>
-							  <div class="col-md-12 form-group">	
-                     <div class="col-md-3">
-                                    <label class="control-label">City </label>
-                                  </div>
-                                  <div class="col-md-3">
-                                    <input type="text" name="city" id="city" class="form-control input-medium">          </div>							
-                                  <div class="col-md-3">
-                                    <label class="control-label">State</label>
-                                  </div>
-										<div class="col-md-3">
-										<select class="form-control input-medium" id="state" name ="state">
-										<option value="alabama">Alabama</option>
-										<option value="alaska">Alaska</option>
-										<option value="arizona">Arizona </option>
-										<option value="arkansas">Arkansas</option>
-										<option value="california">California</option>
-										<option value="colorado">Colorado</option>
-										<option value="connecticut">Connecticut</option>
-										<option value="delaware">Delaware</option>
-										<option value="florida">Florida</option>
-										<option value="georgia">Georgia</option>
-										<option value="hawaii">Hawaii</option>
-										<option value="idaho">Idaho</option>
-										<option value="illinois">Illinois</option>
-										<option value="indiana">Indiana</option>
-										<option value="iowa">Iowa</option>
-										<option value="kansas"> Kansas</option>
-										<option value="kentucky">Kentucky</option>
-										<option value="louisiana">Louisiana</option>
-										<option value="maine">Maine</option>
-										<option value="maryland">Maryland</option>
-										<option value="massachusetts">Massachusetts</option>
-										<option value="michigan">Michigan</option>
-										<option value="minnesota">Minnesota</option>
-										<option value="mississippi">Mississippi</option>
-										<option value="missouri">Missouri</option>
-										<option value="montana">Montana</option>
-										<option value="nebraska">Nebraska</option>
-										<option value="nevada">Nevada</option>
-										<option value="new_hampshire">New Hampshire</option>
-										<option value="new_hampshire">New Hampshire</option>
-										<option value="new_mexico">New Mexico</option>
-										<option value="new_york">New york</option>
-										<option value="north_carolina">North Carolina</option>
-										<option value="north_dakota">North Dakota</option>
-										<option value="ohio">Ohio</option>
-										<option value="oklahoma">Oklahoma</option>
-										<option value="oregon">Oregon</option>
-										<option value="pennsylvania">Pennsylvania</option>
-										<option value="rhode_island">Rhode Island </option>
-										<option value="south_carolina">South Carolina</option>
-										<option value="south_dakota">South Dakota</option>
-										<option value="tennessee">Tennessee</option>
-										<option value="texas">Texas</option>
-										<option value="utah">Utah</option>
-										<option value="vermont">Vermont</option>
-										<option value="Virginia">Virginia</option>
-										<option value="washington">Washington</option>
-										<option value="west_virginia">West Virginia</option>
-										<option value="wisconsin">Wisconsin</option>
-										<option value="wyoming">Wyoming</option>
-										</select>
-									</div>
-                      </div>
-							  
-                            
-                             <div class="col-md-12 form-group">
-							
-                             
-                               <div class="col-md-3">
-                                    <label class="control-label">Zip code</label>
-                                  </div>
-                                  <div class="col-md-3">
-                                    <input type="text" name="zipcode" id="zipcode" class="form-control input-medium">
-                                  </div>
-							
-									 <div class="div-units2 col-md-3">
-									 <label class="control-label "># of Units</label> 
-									 </div>
-									 <div class="col-md-3 div-units2">
-									 <select name="numberOfUnits1" class="form-control input-medium"> 
-									 <option value="">Select Unit</option>
-									 <option value="1">1</option>
-									 <option value="2">2</option>
-									 <option value="3">3</option>
-									 <option value="4">4</option>
-									 <option value="5">5</option>
-									 <option value="6">6</option>
-									 <option value="7">7</option>
-									 <option value="8">8</option>
-									 <option value="9">9</option>
-									 </select>
-									 </div>
-								</div>
-								
-                              
-							<div class="col-md-12 form-group">
-								
-                                 
-							
-								</div>
-<div class="col-md-12 form-group">
-                                  <div class="col-md-3">
-                                    <label class="control-label">Current Occupancy</label>
-                                  </div>
-                                  <div class="col-md-6">
-                                    <div class="radio-list">
-                  <ul class="list-inline" style="padding-top:7px;">
-                  <li>
-                                      <label>
-                                      <input type="radio" name="currentOccupancy" value="ownerOccupied" data-title="1" />
-                                      Owner Occupied </label>
-                                      </li><li><label>
-                                      <input type="radio" name="currentOccupancy" value="tenant" data-title="2" />
-                                      Tenant Occupied</label>
-                                      </li><li><label>
-                                      <input type="radio" name="currentOccupancy" value="vacant" data-title="2" />
-                                      Vacant </label></li></ul>
-                                    </div>
-                                  </div>
+<div class="col-md-3 div-moreborrower" style="display:none;"> <div class="col-md-3"><input type="text" pattern="[0-9]" maxlength="1" id="validate" class="borrowerscount1 form-control" /></div><div class="col-md-4"> <a href="javascript:;" class="btn default" id="add-borrower"><i class="fa fa-plus"></i> Add Borrower</a></div></div>
+                                                                <!-- row ends here -->
+                                                            </div>
+ 
+<div class="div-borrowerinfo">
+ <div class="col-md-12  form-group">
+ <strong class="block text-left"><u style="margin-left: 13px;">Borrower Info<br /></u><br /></h3></strong>
+                                                            
+                                                             <div class="col-md-12  form-group">
+                                                       
+<div class="col-md-3">
+                                                                <label class="control-label">First Name
+                                                                </label>      </div>
+                                                                <div class="col-md-3">
+                                                                    <input class="form-control input-medium" name="borrowerfirstname" id="borrowerfirstname" type="text"> 
+                                                                     
+                                                                </div>
+                                                                
+                                                      <div class="col-md-3 text-custome">
+                                                                <label class="control-label">Last Name
+                                                                </label>      </div>
+                                                                <div class="col-md-3">
+                                                                    <input class="form-control input-medium" name="borrowerlastname" id="borrowerlastname" type="text"> 
+                                                                     
+                                                                </div>
+                                                           </div>  
+                                                           <div class="col-md-12 form-group">
+                                                       
+                                                            <div class="col-md-3">
+                                                                <label class="control-label">Social Security #
+                                                                </label>      </div>
+                                                             <div class="col-md-3 form-inline">
+  
+    <div style="padding:0;" class="col-md-4"><input type="text" class="form-control" style="width: 77%;" name="ssn" id="ssn1"> <span style="float: right; width: 12%; line-height: 30px;">-</span></div>
+    <div style="padding:0;" class="col-md-4"> <input type="text" class="form-control" style="width: 76%;" name="ssn" id="ssn2"> <span style="float: right; width: 12%; line-height: 30px;">-</span></div>
+    <div style="padding:0;" class="col-md-4"> <input type="text" class="form-control" style="width: 76%;" name="ssn" id="ssn3"> </div>
+  
+  </div>
+                                                                
+                                                      <div class="col-md-3  text-custome">
+                                                                <label class="control-label">Date Of Birth
+                                                                </label>      </div>
+                                                                <div class="col-md-3 form-inline">
+																<input type="text" class="form-control input-medium" placeholder="MM/DD/YYYY" name="borrowerdob" id="borrowermm">
 
-</div>
-					
-<div class="col-md-12 div-occupancy form-group">
+  </div>
+                                                           </div>  
+                                                            <div class="col-md-12  form-group">
+                                                       
+                                                            <div class="col-md-3">
+                                                                <label class="control-label">Home Phone
+                                                                </label>      </div>
+                                                             <div class="col-md-3 form-inline">
+  
+    <div style="padding:0;" class="col-md-4"><input type="text" class="form-control" style="width: 77%;" name="borrowerphone" id="borrowerphone1"> <span style="float: right; width: 12%; line-height: 30px;">-</span></div>
+    <div style="padding:0;" class="col-md-4"> <input type="text" class="form-control" style="width: 76%;" name="borrowerphone" id="borrowerphone2"> <span style="float: right; width: 12%; line-height: 30px;">-</span></div>
+    <div style="padding:0;" class="col-md-4"> <input type="text" class="form-control" style="width: 76%;" name="borrowerphone" id="borrowerphone3"> </div>
+  
+  </div>
+                                                                
+                                                      <div class="col-md-3 text-custome">
+                                                                <label class="control-label">Email
+                                                                </label>      </div>
+                                                                <div class="col-md-3">
+                                                                    <input class="form-control input-medium" name="borroweremail" id="borroweremail" type="email"> 
+                                                                     
+                                                                </div>
+                                                           </div>
+                                                            <div class="col-md-12  form-group">
                                 
                                   <div class="col-md-3">
-                                    <label class="control-label ">Occupany after Loan closes</label>
+                                    <label class="control-label">Marital Status</label>
                                   </div>
-                                  <div class="col-md-6" style="padding-left: 22px;">
+                                  <div class="col-md-9">
                                     <div class="radio-list">
                   <ul class="list-inline" style="padding-top:7px;">
                   <li>
                                       <label>
-                                      <input type="radio" name="proposedOccupancy" value="ownerOccupied" data-title="1" />
-                                      Owner Occupied </label>
+                                                                            <input name="BorrowerMaritalStatus" value="married" data-title="1" type="radio"> Married </label>
                                       </li><li><label>
-                                      <input type="radio" name="proposedOccupancy" value="tenant" data-title="2" />
-                                      Tenant Occupied </label>
+                                                                            <input name="BorrowerMaritalStatus" value="unMarried" data-title="2" type="radio"> Unmarried </label>
                                       </li><li><label>
-                                      <input type="radio" name="proposedOccupancy" value="vacant" data-title="2" />
-                                      Vacant </label></li></ul>
+                                                                            <input name="BorrowerMaritalStatus" value="seprated" data-title="2" type="radio"> Separated </label></li></ul>
                                     </div>
                                   </div>
-								</div>
-								</div>
-								 </div>
-                    
-                  </div>
+                              
+                              </div>
+ <div class="col-md-12  form-group">
+                                                            <div class="col-md-3">
+                                                                <label class="control-label" style="text-align:left;"> Years of School
+                                                                    
+                                                                </label></div>
+                                                                <div class="col-md-3 ">
+                                                                    <input id="dp1474546012359" class="form-control date hasDatepicker input-medium" name="BorrowerYearSchool" type="text">
+                                                                    <span class="help-block"> </span>
+                                                                </div>
+                                                                <div class="col-md-3  text-custome">             
+                                                                <label class="control-label">Number of dependants 
+                                                                </label></div>     
+                                                                <div class="col-md-3 ">                    
+                                                                <input type="text" class="form-control input-medium" name="borrowerDependentsNumber" id="borrowerDependentsNumber"/>                           
+
+                                                                </div>
+                                                                </div>
+
+ <div class="col-md-12  form-group">
+                                
+                                  <div style="float:left;padding-left: 15px;">
+                                    <label class="control-label">Do all borrowers live at same address?</label>
+                                  </div>
+                                 
+                                    <div class="radio-list col-md-3">
+                  <ul class="list-inline" style="padding-top:7px;">
+                  <li>
+                                      <label>
+                                       <input name="livetogether" value="yes" data-title="1" type="radio">  Yes </label>
+                                      </li><li><label>
+                                      <input name="livetogether" value="no" data-title="2" type="radio"> No </label>
+                                      </li></ul>
+                                    </div>
+                                  </div>
+								<hr class="col-md-12" />
+                                  <div class="col-md-12  form-group">
+ <strong class="block text-left"><u style="margin-left: 13px;">Present Home Address</u> (Primary Residence)<br /></strong>
+</div>
+<div class="col-md-12 form-group margin-padding-lr-0">
+									@include("address",array(
+												'value1' => 'abc',
+												'value2' => 'test',
+												'value3' => date('Y-m-d'),
+											));)
+                                <div class="col-md-12  form-group  margin-padding-lr-0">
+							   <div class="col-md-6">
+							   
+                                  <div style="float:left;padding-left: 15px;">
+                                    <label class="control-label">Different Mailing Address?</label>
+                                  </div>
+                                 
+                                    <div class="radio-list col-md-6">
+                  <ul class="list-inline" style="padding-top:7px;">
+                  <li>
+                                      <label>
+                                                                            <input name="diffMailingAddress" class="diffMailingAddress" value="yes" data-title="1" type="radio"> Yes</label>
+                                      </li><li><label>
+                                                                            <input name="diffMailingAddress" class="diffMailingAddress" value="no" data-title="2" type="radio"> No </label>
+                                      </li></ul>
+                                    </div>
+                                </div> 
+<div class="col-md-6">
+<div class="col-md-6 ">
+                                    <label class="control-label">Primary Residence is</label>
+                                  </div>
+                                 
+                                    <div class="radio-list col-md-6">
+                  <ul style="padding-top:7px;" class="list-inline">
+                  <li>
+                                      <label>
+                                                                            <input type="radio" data-title="1" value="owned" class="primaryAddress" name="primaryAddress"> Owned </label>
+                                      </li><li><label>
+                                                                            <input type="radio" data-title="2" value="rented" class="primaryAddress" name="primaryAddress"> Rented </label>
+                                      </li></ul>
+                                    </div>
+                                  
+
+
+
+</div>
+								
+								  </div>
+
+                                  </div>
+                            
+
+</div>
+      </div>
+      </div>
+
+</form>
+</div>
+
+
+                  <div class="portlet-title">
+              <div class="actions">
+<div class="pull-right">			  
+			  <a class="btn btn-sm btn-success text-right" href="entityinfo.php">Save & Continue <i class="fa fa-arrow-right"></i></a> <a class="btn btn-sm btn-success text-right" href="#"> Save & Exit <i class="fa fa-arrow-right"></i></a>   </div>         
+			</div>
+			</div>
+			<div class="col-md-12">
+			<hr />
+			</div>
                 </div>
               </form>
-            </div>
-
-
-       <div class="portlet-title">
-              <div class="actions" style="float: right;"> 
-        <a class="btn btn-sm btn-success text-right" href="borrowerinfo.php">Save & Continue <i class="fa fa-arrow-right"></i></a> <a class="btn btn-sm btn-success text-right" href="#"> Save & Exit <i class="fa fa-arrow-right"></i></a>  </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <!-- END CONTENT BODY -->
   </div>
+
 @stop
 @extends('layouts.footer-content')
 @extends('layouts.footer')
