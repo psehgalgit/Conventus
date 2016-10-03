@@ -1,5 +1,6 @@
 @extends('layouts.layout')
 @section('header-links')
+
 <style>
 span .number{
 display: none;
@@ -29,7 +30,7 @@ padding-left: 0px;
      		   <a class="btn btn-sm btn-success" href="info-submitted.php">Save & Continue <i class="fa fa-arrow-right"></i></a>  </div>
             </div>
              <div class="portlet-body form">
-             {{ Form::open(array('url' => 'foo/bar','method' => 'post')) }}
+           
                 <div class="form-wizard">
                   <div class="form-body">
                  
@@ -211,7 +212,7 @@ id="progress-1">10%</div>
                     
                   </div>
                 </div>
-              {{ Form::close() }}
+              
             </div>
 
 
@@ -226,8 +227,13 @@ id="progress-1">10%</div>
 @stop
 @extends('layouts.footer-content')
 @extends('layouts.footer')
+	
 @section('footer-script')
+
 <!-- END THEME LAYOUT SCRIPTS -->
+	<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="	/assets/pages/scripts/form-wizard.min.js" type="text/javascript"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
 <script>
       var j=0;
 var num=0;
