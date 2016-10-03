@@ -6,7 +6,7 @@
                     <!-- BEGIN LOGO -->
                     <div class="page-logo">
                         <a href="index.html" style="color:#fff;">
-                            <img src="images/conventuslogo2.jpg" alt="Conventus logo" class="logo-default" style="margin-top:7px" />
+                            <img src="/images/conventuslogo2.jpg" alt="Conventus logo" class="logo-default" style="margin-top:7px" />
                         </a>
                         <div class="menu-toggler sidebar-toggler">
                             <span></span>
